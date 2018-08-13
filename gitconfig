@@ -1,0 +1,6 @@
+[user]
+	name = Sam Greenwood
+	email = sam.greenwood@unitiwireless.com
+[core]
+	filemode = false
+	excludesfile = /home/samgreenwood/.gitignore
