@@ -26,6 +26,8 @@ Plugin 'posva/vim-vue'
 Plugin 'mattn/emmet-vim'
 Plugin 'lumiliet/vim-twig'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'adoy/vim-php-refactoring-toolbox'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -93,8 +95,8 @@ imap jj <esc>
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 "phpunit
-nmap <Leader>t :!vendor/bin/phpunit --debug --colors -c phpunit.xml --stop-on-error --stop-on-failure --coverage-html web/coverage<cr>
-nmap <Leader>r :!vendor/bin/phpunit --debug --colors -c phpunit.xml --stop-on-error --stop-on-failure %:p<cr>
+nmap <Leader>t :!vendor/bin/phpunit --debug --colors --stop-on-error --stop-on-failure --coverage-html web/coverage<cr>
+nmap <Leader>r :!vendor/bin/phpunit --debug --colors --stop-on-error --stop-on-failure %:p<cr>
 
 "easier window navigation
 nmap <C-h> <C-w>h
@@ -169,3 +171,6 @@ autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
 autocmd BufWritePost *.php :silent exec "!php-cs-fixer fix %:p > /dev/null 2>&1"
+
+let g:ale_linters = {'rust': ['rustc']}
+

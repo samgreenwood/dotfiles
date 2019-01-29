@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/vim8/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/samgreenwood/.oh-my-zsh
