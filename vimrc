@@ -27,7 +27,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'lumiliet/vim-twig'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'adoy/vim-php-refactoring-toolbox'
-Plugin 'w0rp/ale'
+Bundle 'OmniSharp/omnisharp-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 call vundle#end()
 
@@ -171,6 +174,3 @@ autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
 autocmd BufWritePost *.php :silent exec "!php-cs-fixer fix %:p > /dev/null 2>&1"
-
-let g:ale_linters = {'rust': ['rustc']}
-

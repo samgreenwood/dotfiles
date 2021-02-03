@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$HOME/.cargo/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/samgreenwood/.oh-my-zsh
+export ZSH=/home/sam/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -80,3 +80,11 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+PATH="/home/sam/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/sam/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/sam/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/sam/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/sam/perl5"; export PERL_MM_OPT;
+export EDITOR=vim
+export SHELL=/usr/bin/zsh
