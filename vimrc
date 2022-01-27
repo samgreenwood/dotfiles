@@ -11,26 +11,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-vinegar'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'jwalton512/vim-blade'
-Plugin 'fatih/vim-go'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'ervandew/supertab'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-erlang/vim-erlang-runtime'
-Plugin 'posva/vim-vue'
-Plugin 'mattn/emmet-vim'
-Plugin 'lumiliet/vim-twig'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'adoy/vim-php-refactoring-toolbox'
-Bundle 'OmniSharp/omnisharp-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'maxmellon/vim-jsx-pretty'
 
 call vundle#end()
 
@@ -126,12 +112,6 @@ set showcmd
 "Airline
 :set laststatus=2
 
-"CtrlP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-nmap <D-p> :CtrlP<cr>
-nmap <D-r> :CtrlPBufTag<cr>
-nmap <D-e> :CtrlPMRUFiles<cr>
-
 "pdv
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <C-d> :call pdv#DocumentWithSnip()<CR>
@@ -173,4 +153,8 @@ endfunction
 autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
-autocmd BufWritePost *.php :silent exec "!php-cs-fixer fix %:p > /dev/null 2>&1"
+
+"autocmd BufWritePost *.php :silent exec "!php-cs-fixer fix %:p > /dev/null 2>&1"
+"autocmd BufWritePost *.cs :silent exec "!ls %:p | dotnet format --include - --folder > /dev/null 2>&1"
+
+let g:coc_disable_startup_warning = 1
