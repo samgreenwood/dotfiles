@@ -17,6 +17,7 @@ Plugin 'ervandew/supertab'
 Plugin 'stephpy/vim-php-cs-fixer'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'neoclide/coc.nvim',
 
 call vundle#end()
 
@@ -153,6 +154,7 @@ endfunction
 autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 
 "autocmd BufWritePost *.php :silent exec "!php-cs-fixer fix %:p > /dev/null 2>&1"
 "autocmd BufWritePost *.cs :silent exec "!ls %:p | dotnet format --include - --folder > /dev/null 2>&1"
